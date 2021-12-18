@@ -176,22 +176,22 @@ class _MyHomePageState extends State<MyHomePage> {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           ),
-                          SizedBox(height: 10.0),
+                          const SizedBox(height: 10.0),
                           Text(
                             description,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontFamily: 'nunito',
                                 fontSize: 14.0,
                                 // fontWeight: FontWeight.w300,
                                 color: Colors.white),
                           ),
-                          SizedBox(height: 10.0),
+                          const SizedBox(height: 10.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
                                 price,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     fontFamily: 'varela',
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
