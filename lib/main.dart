@@ -154,67 +154,112 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 335.0,
                 ),
                 Positioned(
-                    top: 75.0,
-                    child: Container(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                      height: 260.0,
-                      width: 225.0,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25.0),
-                          color: const Color(0xFFDAB68C)),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(
-                            height: 60.0,
-                          ),
-                          Text(
-                            coffeeName,
-                            style: const TextStyle(
-                                fontFamily: 'varela',
-                                fontSize: 32.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          const SizedBox(height: 10.0),
-                          Text(
-                            description,
-                            style: const TextStyle(
-                                fontFamily: 'nunito',
-                                fontSize: 14.0,
-                                // fontWeight: FontWeight.w300,
-                                color: Colors.white),
-                          ),
-                          const SizedBox(height: 10.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Text(
-                                price,
-                                style: const TextStyle(
-                                    fontFamily: 'varela',
-                                    fontSize: 25.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF3A4742)),
-                              ),
-                              Container(
-                                  height: 40.0,
-                                  width: 40.0,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20.0),
-                                      color: Colors.white),
-                                  child: Center(
-                                      child: Icon(Icons.favorite,
-                                          color: isFavorite
-                                              ? Colors.red
-                                              : Colors.grey,
-                                          size: 15.0)))
-                            ],
-                          )
-                        ],
-                      ),
-                    ))
+                  top: 75.0,
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                    height: 260.0,
+                    width: 225.0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25.0),
+                        color: const Color(0xFFDAB68C)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 60.0,
+                        ),
+                        Text(
+                          shopName,
+                          style: const TextStyle(
+                              fontFamily: 'varela',
+                              fontSize: 15.0,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          coffeeName,
+                          style: const TextStyle(
+                              fontFamily: 'varela',
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(height: 10.0),
+                        Text(
+                          description,
+                          style: const TextStyle(
+                              fontFamily: 'nunito',
+                              fontSize: 14.0,
+                              // fontWeight: FontWeight.w300,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(height: 10.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              price,
+                              style: const TextStyle(
+                                  fontFamily: 'varela',
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF3A4742)),
+                            ),
+                            Container(
+                                height: 40.0,
+                                width: 40.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20.0),
+                                    color: Colors.white),
+                                child: Center(
+                                    child: Icon(Icons.favorite,
+                                        color: isFavorite
+                                            ? Colors.red
+                                            : Colors.grey,
+                                        size: 15.0)))
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 60.0,
+                  top: 25.0,
+                  child: Container(
+                    height: 100.0,
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(imgPath), fit: BoxFit.contain)),
+                  ),
+                ),
               ],
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            InkWell(
+              onTap: () {},
+              child: Container(
+                height: 50.0,
+                width: 225.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50.0),
+                    color: Colors.black),
+                child: const Center(
+                  child: Text(
+                    'Order Now',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'nunito',
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
             )
           ],
         ),
